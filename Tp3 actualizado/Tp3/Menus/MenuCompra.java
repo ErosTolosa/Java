@@ -41,6 +41,7 @@ public static void subMenu (int x){
                             precio=((55000 * 0.30)+55000); //precio con 30%
                             precioTotal=((precio * 0.21)+ precio); //precio con IVA
                             System.out.println("el precio total sera de " + precioTotal);
+
                             System.out.println("gracias por su compra");
                         break;
                         case 2://Pc2
@@ -74,16 +75,16 @@ public static void subMenu (int x){
  *
  */
 public static void Partes (int x){
-    System.out.println("elegir producto");
+    System.out.println("elegir producto");//menu basico
     System.out.println("\n 1-gabinete=$5000 \n 2-ram=$2500 \n 3-Fuente=$7000 \n 4-Procesador=$15000");
     System.out.println("\n 5-Discos Rigidos=$6000 \n 6-Motherboards=$10000 \n 7-mouse=$7000 \n 8-teclado=$3500");
     System.out.println("\n 9-parlante=$1000 \n 10-microfono=$1250 \n");
     int partes =Integer.parseInt(System.console().readLine());
     double precio;
     double precioTotal;
-    if (partes == 1){
+    if (partes == 1){//gabinete
         precio=5000;
-        System.out.println("cuantos va a comprar?");
+        System.out.println("cuantos va a comprar?(10 unidades maximo)");
         int cantidad=Integer.parseInt(System.console().readLine());
         if (cantidad <=2){
             precioTotal=((precio*cantidad)*0.30);
@@ -92,7 +93,7 @@ public static void Partes (int x){
             precioTotal=(((precio*cantidad)*0.30)*0.21);
             System.out.println("el precioTotal es" + (precioTotal));
         }      
-    }if (partes == 2){
+    }if (partes == 2){//ram
         precio=2500;
         System.out.println("cuantos va a comprar?");
         int cantidad=Integer.parseInt(System.console().readLine());

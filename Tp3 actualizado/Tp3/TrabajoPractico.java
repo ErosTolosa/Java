@@ -11,6 +11,7 @@ public class TrabajoPractico {
             switch(accion){
                 case 1://Atencion al publico
                     Menus.MenuPrincipal.menuPrincipal();
+                    salir=true;
                 break;
                 case 2://Deposito (otro grupo)
                     System.out.println("no encontrado");

@@ -1,5 +1,7 @@
 package Menus;
 
+import Stock.Stock;
+
 public class MenuPrincipal {
     /**
      * Esta función genera un menú interactivo para la compra de productos, el stock e información. 
@@ -23,7 +25,7 @@ public class MenuPrincipal {
                                     Menus.MenuPcs.componentesPcs(opcion); //Muestra las Pcs y sus componentes.
                                 break;
                                 case 2: 
-                                    //////funcion de mostrar stock
+                                    Stock.stock();//funcion de mostrar stock
                                 break;
                                 case 3:
                                     //////recarga de Stock
@@ -33,8 +35,6 @@ public class MenuPrincipal {
                                     int salida=Integer.parseInt(System.console().readLine());
                                     if (salida == 1){
                                         Menus.MenuPrincipal.menuPrincipal();
-                                    }if (salida == 2){
-                                        salir=true;//Permite la salida del programa
                                     }else{
                                         salir=true;//Permite la salida del programa
                                     }
