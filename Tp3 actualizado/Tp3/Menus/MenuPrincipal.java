@@ -1,6 +1,6 @@
 package Menus;
 
-import Stock.Stock;
+import Stock.stock2;
 
 public class MenuPrincipal {
     /**
@@ -25,7 +25,16 @@ public class MenuPrincipal {
                                     Menus.MenuPcs.componentesPcs(opcion); //Muestra las Pcs y sus componentes.
                                 break;
                                 case 2: 
-                                    Stock.stock();//funcion de mostrar stock
+                                    System.out.println("elegir stock");  //menu basico
+                                    System.out.println("1-Stock partes 2-Stock pcs enteras"); 
+                                    int verElStock=Integer.parseInt(System.console().readLine());
+                                    if (verElStock == 1){//partes
+                                        stock2.stockPartes();//funcion para mostrar stock de partes
+                                        Menus.MenuPrincipal.menuPrincipal();//menu principal
+                                    }else{//pcs enteras
+                                        stock2.stockPcsEnteras();//funcion para mostrar stock pcs enteras
+                                        Menus.MenuPrincipal.menuPrincipal();//menu principal
+                                    }
                                 break;
                                 case 3:
                                     //////recarga de Stock
@@ -34,14 +43,14 @@ public class MenuPrincipal {
                                     System.out.println("\n 1-volver atras \n 2-salir de la aplicacion");
                                     int salida=Integer.parseInt(System.console().readLine());
                                     if (salida == 1){
-                                        Menus.MenuPrincipal.menuPrincipal();
+                                        Menus.MenuPrincipal.menuPrincipal();//menu principal
                                     }else{
                                         salir=true;//Permite la salida del programa
                                     }
                                 break;
                                 default:salir=false;
                             }
-                
+                            
             }if (menuPrincipal == 3){
                 Menus.MenuInfo.info();//llama a la funcion de informacion
 

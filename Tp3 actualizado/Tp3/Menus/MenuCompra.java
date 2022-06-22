@@ -22,7 +22,8 @@ public static void subMenu (int x){
             case 3:////Llama a la función para volver al menu principal
                 Menus.MenuPrincipal.menuPrincipal(); 
             break;
-            default: Menus.MenuCompra.subMenu(x);//Cualquier otro numero ingresado, volvera a llamar al menu    
+            default: 
+            Menus.MenuCompra.subMenu(x);//Cualquier otro numero ingresado, volvera a llamar al menu    
         }
 }
 
@@ -31,30 +32,63 @@ public static void subMenu (int x){
  * 
  */
     public static void pcsEnteras(int x){        
-        System.out.println("---Selección de Pcs Ensambladas---");
+        System.out.println("---Selección de Pcs Ensambladas---");//menu basico
                     System.out.println("\n 1=pc1 \n 2=pc2 \n 2=pc3 \n 4-Salir");
                     int pcs= Integer.parseInt(System.console().readLine());
                     double precio;
                     double precioTotal;
+                    int cantidad;
                     switch (pcs){ 
                         case 1://Pc1
-                            precio=((55000 * 0.30)+55000); //precio con 30%
-                            precioTotal=((precio * 0.21)+ precio); //precio con IVA
-                            System.out.println("el precio total sera de " + precioTotal);
-
-                            System.out.println("gracias por su compra");
+                            precio=55000;
+                            System.out.println("ingrese la cantidad de productos");
+                            cantidad=Integer.parseInt(System.console().readLine());
+                            if (cantidad == 1){  
+                                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                                System.out.println(precioTotal);
+                            }if (cantidad <= 2){
+                                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                                System.out.println(precioTotal);
+                            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                                System.out.println(precioTotal);
+                            }else{
+                                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+                            }
                         break;
                         case 2://Pc2
-                            precio=((59000 * 0.30)+59000); //precio con 30%
-                            precioTotal=((precio * 0.21)+ precio); //precio con IVA
-                            System.out.println("el precio total sera de " + precioTotal);
-                            System.out.println("gracias por su compra");
+                            precio=59000;
+                            System.out.println("ingrese la cantidad de productos");
+                                cantidad=Integer.parseInt(System.console().readLine());
+                            if (cantidad == 1){  
+                                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                                System.out.println(precioTotal);
+                            }if (cantidad <= 2){
+                                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                                System.out.println(precioTotal);
+                            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                                System.out.println(precioTotal);
+                            }else{
+                                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+                            }
                         break;
                         case 3://Pc3
-                            precio=((69000 * 0.30)+69000); //precio con 30%
-                            precioTotal=((precio * 0.21)+ precio); //precio con IVA
-                            System.out.println("el precio total sera de " + precioTotal);
-                            System.out.println("gracias por su compra");
+                            precio=69000;
+                            System.out.println("ingrese la cantidad de productos");
+                            cantidad=Integer.parseInt(System.console().readLine());
+                            if (cantidad == 1){  
+                                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                                System.out.println(precioTotal);
+                            }if (cantidad <= 2){
+                                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                                System.out.println(precioTotal);
+                            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                                System.out.println(precioTotal);
+                            }else{
+                                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+                            }
                         break;
                         case 4://salida
                             System.out.println("\n 1=volver atras  \n 2=volver pagina principal");
@@ -82,30 +116,181 @@ public static void Partes (int x){
     int partes =Integer.parseInt(System.console().readLine());
     double precio;
     double precioTotal;
-    if (partes == 1){//gabinete
-        precio=5000;
-        System.out.println("cuantos va a comprar?(10 unidades maximo)");
-        int cantidad=Integer.parseInt(System.console().readLine());
-        if (cantidad <=2){
-            precioTotal=((precio*cantidad)*0.30);
-            System.out.println("el precioTotal es" + (precioTotal));
-        }else{
-            precioTotal=(((precio*cantidad)*0.30)*0.21);
-            System.out.println("el precioTotal es" + (precioTotal));
-        }      
-    }if (partes == 2){//ram
-        precio=2500;
-        System.out.println("cuantos va a comprar?");
-        int cantidad=Integer.parseInt(System.console().readLine());
-        if (cantidad <=2){
-            precioTotal=((precio*cantidad)*0.30);
-            System.out.println("el precioTotal es" + (precioTotal));
-        }else{
-            precioTotal=(((precio*cantidad)*0.30)*0.21);
-            System.out.println("el precioTotal es" + (precioTotal));
-        }      
+    int cantidad;
+    switch (partes) {
+        case 1://Gabinete
+            precio=5000;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        case 2://ram
+            precio=2500;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        case 3://fuente
+            precio=2000;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        case 4://procesador
+            precio=15000;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        case 5://discos rigidos
+            precio=6000;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        case 6://motherboards
+            precio=10000;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        case 7://mouses
+            precio=3000;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        case 8://teclados
+            precio=3500;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        case 9://parlantes
+            precio=1000;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        case 10://microfonos
+            precio=1250;
+            System.out.println("ingrese la cantidad de productos");
+            cantidad=Integer.parseInt(System.console().readLine());
+            if (cantidad == 1){  
+                precioTotal= ((precio * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if (cantidad <= 2){
+                precioTotal= (((precio * 2) * 0.30)* precio);//precio con 30%
+                System.out.println(precioTotal);
+            }if ((cantidad >= 3)&& (cantidad <= 10)){
+                precioTotal=(((precio*cantidad)*0.30) * 0.21) ;//precio con IVA
+                System.out.println(precioTotal);
+            }else{
+                Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
+            }
+        break;
+        default://cualquier otro numero mayor a 10
+            Menus.MenuPrincipal.menuPrincipal(); //volvera al menu principal
     }
-
 
 }
 
