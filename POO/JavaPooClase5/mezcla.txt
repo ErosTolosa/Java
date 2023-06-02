@@ -1,0 +1,10 @@
+blanco
+auto
+verde
+bicicleta
+azul
+moto
+rojo
+skate
+violeta
+naranja

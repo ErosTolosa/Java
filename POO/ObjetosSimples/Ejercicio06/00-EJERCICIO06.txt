@@ -1,0 +1,28 @@
+Ejercicio 6:
+
+Implementa la clase Terminal. Un terminal tiene asociado un número. Los
+terminales se pueden llamar unos a otros y el tiempo de conversación corre
+para ambos. A continuación se proporciona el contenido del main y el resultado
+que debe aparecer por pantalla.
+
+Programa principal:
+Terminal t1 = new Terminal("011 5925 6845");
+Terminal t2 = new Terminal("2966 215 687");
+Terminal t3 = new Terminal("011 3289 4209");
+Terminal t4 = new Terminal("354 7398 4118");
+System.out.println(t1);
+System.out.println(t2);
+t1.llama(t2, 320);
+t1.llama(t3, 200);
+System.out.println(t1);
+System.out.println(t2);
+System.out.println(t3);
+System.out.println(t4);
+
+Salida:
+Nº 011 5925 6845 - 0s de conversación
+Nº 2966 215 687 - 0s de conversación
+Nº 011 5925 6845 - 520s de conversación
+Nº 2966 215 687 - 320s de conversación
+Nº 011 3289 4209 - 200s de conversación
+Nº 354 7398 4118 - 0s de conversación

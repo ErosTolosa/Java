@@ -1,0 +1,64 @@
+﻿Ejercicio 1:
+¿Cuáles serían los atributos de la clase EquipoDeFutbol 
+¿Se te ocurren algunas instancias de esta clase?
+Jugadores, Pelota, Tecnico, Arbitro, Partido 
+
+Ejercicio 2:
+A continuación tienes una lista en la que están mezcladas varias clases 
+con instancias de esas clases .a qué clase pertenece cada una de estas instancias 
+y cuál es la jerarquía entre las clases: 
+************************************************************
+* paula, goofy, garfield, perro, mineral, caballo, tom,    *
+* silvestre, pirita, rocinante, milu, snoopy, gato, pluto, *
+* animal, javier, bucefalo, pegaso, ayudante_de_santa,     *
+* cuarzo, laika, persona, pato_lucas.			   *
+************************************************************
+Aniimal
+|___ Caballo
+|	|___rocinante
+|	|___bucefalo
+|	|___pegaso
+|___ Gato
+|	|___garfield
+|	|___silvestre
+|	|___tom
+|	|___macri
+|___ Perro
+|	|___goofy
+|	|___laika
+|	|___pluto
+|	|___ayudanete_de_santa
+|	|___snoopy
+|	|___milu
+|___ Persona
+	|___paula
+	|___javier
+	|___goofy
+	|___pato_lucas
+
+Mineral
+|___pirita
+|___cuarzo
+
+Ejercicio 3:
+¿Cuáles serían los atributos de la clase Vivienda? ¿Qué subclases se te ocurren?
+servicios, metrosCuadrados, color, precio, cantidadHabitaciones, ubicacion
+
+Ejercicio 4:
+Hacer una lista con los atributos que podría tener la clase caballo. 
+A continuación haz una lista con los posibles métodos (acciones asociadas a los caballos).
+Atributos: raza, sexo, color, peso, velocidad, edad, 
+Metodos: relincha, corre, trota, come, duerme,
+
+Ejercicio 5:
+Listar los atributos de la clase Alumno 
+nombre,edad,notaMedia,curso.
+
+Ejercicio 6:
+¿Cuáles serían los atributos de la clase Ventana (de computadora)? 
+¿cuáles serían los métodos? Piensa en las propiedades 
+y en el comportamiento de una ventana de cualquier programa.
+
+atributos: estado(minimizado, maximizado), resolucion/tamaño, barraDeHerramientas
+metodos: abrir/cerrar,configurar,buscar
+

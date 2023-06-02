@@ -1,0 +1,13 @@
+Desarrollar un programa que cuente con 2 clases principales: Alumnos y Docentes.
+
+Alumnos debe contar con 4 notas, y un metodo para cargar esas notas (llamado evalua)
+	(Crear un array con maximo 100 alumnos)
+Docente debe contar con un arancel y cantidad de horas trabajadas. Tambien debe tener un metodo
+	para saber cuanto debe cobrar el docente (llamado cobra)
+	(crear un array con un maximo 20 docentes)
+-----------------------------------------------------------------------------
+
+Crear clase Curso. Hay 4 cursos, programacion, sistemas operativos, hardware, bases de datos
+Cada curso cuenta con una cantidad maxima de 25 alumnos.
+Mostrar la cantidad de alumnos de un curso en especifico, mostrar el docente asignado a ese curso
+mostrar el listado de alumnos de ese mismo curso

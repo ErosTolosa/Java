@@ -1,0 +1,4 @@
+auto
+bicicleta
+moto
+skate

@@ -1,0 +1,37 @@
+Ejercicio 7:
+Implementa la clase Movil como subclase de Terminal (la clase del ejercicio
+anterior que ya no hace falta modificar). Cada móvil lleva asociada una tarifa
+que puede ser “rata”, “mono” o “bisonte”. El coste por minuto es de 6, 12 y
+30 centavos respectivamente. Se tarifican los segundos exactos. Obviamente,
+cuando un móvil llama a otro, se le cobra al que llama, no al que recibe la
+llamada. A continuación se proporciona el contenido del main y el resultado
+que debe aparecer por pantalla. Para que el total tarificado aparezca con dos
+decimales, se puede utilizar DecimalFormat.
+DecimalFormat es una clase de JAVA que da un formato especificado por el usuario 
+a los numeros decimales.
+Se utiliza de la siguiente manera: 
+
+import java.text.DecimalFormat; //para importar la biblioteca
+
+DecimalFormat nombreDeVariable = new DecimalFormat("0.00"); //para crear el objeto ("0.00") especifica el formato
+nombreDeVariable.format(nombreDeDouble)// muestra el valor de nombreDeDouble con el formato especificado anteriormente
+
+Programa principal:
+Movil m1 = new Movil("011 5925 6845", "rata");
+Movil m2 = new Movil("2966 215 687", "mono");
+Movil m3 = new Movil("011 3289 4209", "bisonte");
+System.out.println(m1);
+System.out.println(m2);
+m1.llama(m2, 320);
+m1.llama(m3, 200);
+m2.llama(m3, 550);
+System.out.println(m1);
+System.out.println(m2);
+System.out.println(m3);
+
+Salida:
+Nº 011 5925 6845 - 0s de conversación - tarificados 0,00 pesos
+Nº 2966 215 687 - 0s de conversación - tarificados 0,00 pesos
+Nº 011 5925 6845 - 520s de conversación - tarificados 0,52 pesos
+Nº 2966 215 687 - 870s de conversación - tarificados 1,10 pesos
+Nº 011 3289 4209 - 750s de conversación - tarificados 0,00 pesos
